@@ -4,13 +4,13 @@
 class HomePage(tk.Frame):
     def _init_(self, parent, controller):
         super()._init_(parent)
-        tk.Label(self, text="💰 Expense Tracker", font=("Helvetica", 20)).pack(pady=30)
+        tk.Label(self, text="💰 Expense Tracker", font=("Helvetica", 20)).pack(pady=40)
 
         btn_frame = tk.Frame(self)
-        btn_frame.pack(pady=20)
+        btn_frame.pack(pady=16)
 
         tk.Button(btn_frame, text="➕ Add Expense", command=lambda: controller.show_frame("AddExpensePage"),
-                  width=20).grid(row=0, column=0, padx=10, pady=10)
+                  width=20).grid(row=0, column=0, padx=5, pady=10)
         tk.Button(btn_frame, text="📋 View Expenses", command=lambda: controller.show_frame("ViewExpensesPage"),
                   width=20).grid(row=1, column=0, padx=10, pady=10)
         tk.Button(btn_frame, text="📊 Show Summary", command=lambda: controller.show_frame("SummaryPage"),
